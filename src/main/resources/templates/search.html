@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>search</title>
+    <script>
+function search(){
+let key = document.getElementById("search").value;
+let url="/search?key="+ key;
+location.href=url;}
+
+    </script>
+</head>
+<body>
+<h1>Search</h1>
+
+
+<input type="text" id="search" placeholder="Nome Cognome o Telefono"/>
+<button id="searchButton" onclick="search()">cerca</button>
+
+
+<li th:each="contatto:${contatti}">
+    <a th:href="@{'/contatti/'+ ${contatto.id}}" th:text="@{${contatto.nome}+ ' ' +${contatto.cognome}}"></a>
+</body>
+</html>

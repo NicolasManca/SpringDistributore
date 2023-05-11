@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>contatto</title>
+    <style>
+table, th, td {
+  border:1px solid black;
+}
+th{ color:tomato;
+}
+
+
+    </style>
+</head>
+<body>
+<h1 th:text="${contatto.id}"></h1>
+
+<table style="width:30%">
+    <tr>
+        <th>Nome</th>
+        <th>Cognome</th>
+        <th>Telefono</th>
+
+    </tr>
+    <tr>
+        <td th:text="${contatto.nome}"></td>
+        <td th:text="${contatto.cognome}"></td>
+        <td th:text="${contatto.telefono}"></td>
+
+    </tr>
+
+</table>
+</body>
+</html>
